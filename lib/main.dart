@@ -1,3 +1,4 @@
+import 'package:aid_connect/screens/location_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'config/app_router.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: theme(),
       onGenerateRoute: AppRouter.onGenerateRoute,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: LocationScreen.routeName,
     );
   }
 }
