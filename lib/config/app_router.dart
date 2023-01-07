@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../screens/basket_screen.dart';
-import '../screens/checkout_screen.dart';
-import '../screens/filter_screen.dart';
-import '../screens/home_screen.dart';
-import '../screens/location_screen.dart';
-import '../screens/beneficiary_details_screen.dart';
-import '../screens/beneficiary_listing_screen.dart';
+import '../screens/basket/basket_screen.dart';
+import '../screens/beneficiary_details/beneficiary_details_screen.dart';
+import '../screens/beneficiary_listing/beneficiary_listing_screen.dart';
+import '../screens/checkout/checkout_screen.dart';
+import '../screens/filter/filter_screen.dart';
+import '../screens/home/home_screen.dart';
+import '../screens/location/location_screen.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {

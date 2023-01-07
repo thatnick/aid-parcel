@@ -1,9 +1,8 @@
-import 'package:aid_connect/screens/location_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'config/app_router.dart';
 import 'config/theme.dart';
-import 'screens/home_screen.dart';
+import 'screens/location/location_screen.dart';
 
 void main() {
   runApp(const MyApp());
