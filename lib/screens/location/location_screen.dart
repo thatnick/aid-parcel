@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../blocs/autocomplete/autocomplete_bloc.dart';
 import '../../blocs/geolocation/geolocation_bloc.dart';
 import 'gmap.dart';
 import 'location_denied_dialog.dart';
@@ -47,11 +48,43 @@ class LocationScreen extends StatelessWidget {
               }
             },
           ),
-          const Positioned(
+          Positioned(
             top: 40,
             left: 20,
             right: 20,
-            child: LocationSearchBox(),
+            child: Column(
+              children: [
+                const LocationSearchBox(),
+                BlocBuilder<AutocompleteBloc, AutocompleteState>(
+                  builder: (context, state) {
+                    if (state is AutocompleteLoading) {
+                      return const Center(child: CircularProgressIndicator());
+                    } else if (state is AutocompleteLoaded) {
+                      return Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 300,
+                        color: state.autocomplete.isNotEmpty
+                            ? Colors.black.withOpacity(0.6)
+                            : Colors.transparent,
+                        child: ListView.builder(
+                          itemCount: state.autocomplete.length,
+                          itemBuilder: ((context, index) => ListTile(
+                                title: Text(
+                                  state.autocomplete[index].description,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )),
+                        ),
+                      );
+                    } else {
+                      return const Text('Something went wrong');
+                    }
+                  },
+                ),
+              ],
+            ),
           ),
           Positioned(
             bottom: 40,

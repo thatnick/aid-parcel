@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../blocs/autocomplete/autocomplete_bloc.dart';
 
 class LocationSearchBox extends StatelessWidget {
   const LocationSearchBox({
@@ -33,6 +36,11 @@ class LocationSearchBox extends StatelessWidget {
             ),
           ),
         ),
+        onChanged: (value) {
+          context
+              .read<AutocompleteBloc>()
+              .add(LoadAutocompleteEvent(searchInput: value));
+        },
       ),
     );
   }
