@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../screens/basket/basket_screen.dart';
+import '../screens/parcels/parcels_screen.dart';
 import '../screens/beneficiary_details/beneficiary_details_screen.dart';
 import '../screens/beneficiary_listing/beneficiary_listing_screen.dart';
 import '../screens/checkout/checkout_screen.dart';
