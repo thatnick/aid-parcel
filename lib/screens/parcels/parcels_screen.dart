@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BasketScreen extends StatelessWidget {
-  static const String routeName = '/basket';
+class ParcelsScreen extends StatelessWidget {
+  static const String routeName = '/parcels';
 
-  const BasketScreen({super.key});
+  const ParcelsScreen({super.key});
 
   static Route route() {
     return MaterialPageRoute(
-      builder: (_) => const BasketScreen(),
+      builder: (_) => const ParcelsScreen(),
       settings: const RouteSettings(name: routeName),
     );
   }
@@ -16,7 +16,7 @@ class BasketScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Basket'),
+        title: const Text('Parcels'),
       ),
       body: Center(
         child: ElevatedButton(

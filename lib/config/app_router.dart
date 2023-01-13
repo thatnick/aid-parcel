@@ -18,8 +18,8 @@ class AppRouter {
     switch (settings.name) {
       case HomeScreen.routeName:
         return HomeScreen.route();
-      case BasketScreen.routeName:
-        return BasketScreen.route();
+      case ParcelsScreen.routeName:
+        return ParcelsScreen.route();
       case LocationScreen.routeName:
         return LocationScreen.route();
       case CheckoutScreen.routeName:
