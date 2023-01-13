@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'blocs/autocomplete/autocomplete_bloc.dart';
 import 'blocs/geolocation/geolocation_bloc.dart';
+import 'blocs/place/place_bloc.dart';
 import 'config/app_router.dart';
 import 'config/theme.dart';
 import 'repositories/geolocation/geolocation_repository.dart';
@@ -38,6 +39,10 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (context) => AutocompleteBloc(
                 placesRepository: context.read<PlacesRepository>()),
+          ),
+          BlocProvider(
+            create: (context) =>
+                PlaceBloc(placesRepository: context.read<PlacesRepository>()),
           ),
         ],
         child: MaterialApp(
