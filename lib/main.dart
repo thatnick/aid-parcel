@@ -1,21 +1,20 @@
+import 'package:aid_connect/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'blocs/autocomplete/autocomplete_bloc.dart';
 import 'blocs/geolocation/geolocation_bloc.dart';
 import 'blocs/place/place_bloc.dart';
-import 'config/app_router.dart';
 import 'config/theme.dart';
 import 'repositories/geolocation/geolocation_repository.dart';
 import 'repositories/places/places_repository.dart';
-import 'screens/location/location_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AidParcel());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AidParcel extends StatelessWidget {
+  const AidParcel({super.key});
 
   // This widget is the root of your application.
   @override
@@ -48,8 +47,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Flutter Demo',
           theme: theme(),
-          onGenerateRoute: AppRouter.onGenerateRoute,
-          initialRoute: LocationScreen.routeName,
+          home: const MainScreen(),
         ),
       ),
     );

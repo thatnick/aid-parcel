@@ -13,13 +13,6 @@ class LocationScreen extends StatelessWidget {
 
   const LocationScreen({super.key});
 
-  static Route route() {
-    return MaterialPageRoute(
-      builder: (_) => const LocationScreen(),
-      settings: const RouteSettings(name: routeName),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
