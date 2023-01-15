@@ -71,7 +71,6 @@ class LocationSearchBox extends StatelessWidget {
                             ),
                           ),
                           onTap: () {
-                            print('Tap regd');
                             context.read<PlaceBloc>().add(LoadPlace(
                                 placeId: state.autocomplete[index].placeId));
                           },
