@@ -8,10 +8,8 @@ import 'location_denied_dialog.dart';
 import 'location_save_button.dart';
 import 'location_search_box.dart';
 
-class LocationScreen extends StatelessWidget {
-  static const String routeName = '/location';
-
-  const LocationScreen({super.key});
+class LocationPage extends StatelessWidget {
+  const LocationPage({super.key});
 
   @override
   Widget build(BuildContext context) {

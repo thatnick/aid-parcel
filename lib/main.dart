@@ -1,4 +1,4 @@
-import 'package:aid_connect/screens/main/main_screen.dart';
+import 'package:aid_connect/screens/main/nav_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,13 +10,12 @@ import 'repositories/geolocation/geolocation_repository.dart';
 import 'repositories/places/places_repository.dart';
 
 void main() {
-  runApp(const AidParcel());
+  runApp(const AidParcelApp());
 }
 
-class AidParcel extends StatelessWidget {
-  const AidParcel({super.key});
+class AidParcelApp extends StatelessWidget {
+  const AidParcelApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
@@ -45,9 +44,8 @@ class AidParcel extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
-          title: 'Flutter Demo',
           theme: theme(),
-          home: const MainScreen(),
+          home: const NavBarView(),
         ),
       ),
     );
