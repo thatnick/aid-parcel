@@ -69,6 +69,8 @@ flutter:
   assets:
     - assets/
     - assets/icons/
+    - assets/sample_images/ukr/
+    - assets/sample_images/afg/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

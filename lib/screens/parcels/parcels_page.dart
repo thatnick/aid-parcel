@@ -19,6 +19,7 @@ class ParcelsPage extends StatelessWidget {
         title: const Text('Parcels'),
         elevation: 0,
         scrolledUnderElevation: 4,
+        centerTitle: false,
         backgroundColor: const Color(0xFFFFFCFA),
         foregroundColor: Colors.black,
       ),
