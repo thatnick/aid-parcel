@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Afghanistan',
+                  'Send aid to Afghanistan',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Ukraine',
+                  'Send aid to Ukraine',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
