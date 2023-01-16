@@ -15,18 +15,33 @@ class _BeneficiaryScrollState extends State<BeneficiaryScroll> {
   Widget build(BuildContext context) {
     return Stack(children: [
       SizedBox(
-        height: 175,
+        height: 177,
         child: PageView.builder(
             pageSnapping: false,
             padEnds: false,
             controller: PageController(viewportFraction: 0.66),
             itemCount: totalFeatures,
             itemBuilder: (context, index) {
-              return Column(
-                children: const [
-                  FeaturedImage(),
-                  TextBox(),
-                ],
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Container(
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                      strokeAlign: StrokeAlign.inside,
+                      color: const Color(0xFF025949),
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Column(
+                    children: const [
+                      FeaturedImage(),
+                      TextBox(),
+                    ],
+                  ),
+                ),
               );
             }),
       ),
@@ -41,21 +56,14 @@ class FeaturedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Container(
-        height: 125,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(8),
-            topRight: Radius.circular(8),
+    return Container(
+      height: 125,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(
+            'assets/sample_images/ukr/cover.jpeg',
           ),
-          image: DecorationImage(
-            image: AssetImage(
-              'assets/sample_images/ukr/cover.jpeg',
-            ),
-            fit: BoxFit.cover,
-          ),
+          fit: BoxFit.cover,
         ),
       ),
     );
@@ -71,16 +79,9 @@ class TextBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
-      child: Container(
+      child: SizedBox(
         width: (MediaQuery.of(context).size.width * 0.66) - 16,
         height: 50,
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(8),
-            bottomRight: Radius.circular(8),
-          ),
-        ),
         child: Padding(
           padding: const EdgeInsets.all(4),
           child: Column(

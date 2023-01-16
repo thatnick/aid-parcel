@@ -15,7 +15,7 @@ class _FeaturedCarouselState extends State<FeaturedCarousel> {
   Widget build(BuildContext context) {
     return Stack(children: [
       SizedBox(
-        height: 200,
+        height: 202,
         child: PageView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: totalFeatures,
@@ -23,12 +23,27 @@ class _FeaturedCarouselState extends State<FeaturedCarousel> {
                   currentFeatureIndex = pageIndex;
                 }),
             itemBuilder: (context, index) {
-              return Stack(
-                children: [
-                  const FeaturedImage(),
-                  ImageOverlay(
-                      totalFeatures: totalFeatures, currentFeatureIndex: index)
-                ],
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Container(
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 1,
+                      strokeAlign: StrokeAlign.inside,
+                      color: const Color(0xFF025949),
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Stack(
+                    children: [
+                      const FeaturedImage(),
+                      ImageOverlay(
+                          totalFeatures: totalFeatures,
+                          currentFeatureIndex: index)
+                    ],
+                  ),
+                ),
               );
             }),
       ),
@@ -69,17 +84,13 @@ class FeaturedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          image: const DecorationImage(
-            image: AssetImage(
-              'assets/sample_images/ukr/cover.jpeg',
-            ),
-            fit: BoxFit.cover,
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(
+            'assets/sample_images/ukr/cover.jpeg',
           ),
+          fit: BoxFit.cover,
         ),
       ),
     );
@@ -106,7 +117,6 @@ class ImageOverlay extends StatelessWidget {
             height: 135,
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 16,
             height: 30,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -120,13 +130,8 @@ class ImageOverlay extends StatelessWidget {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 16,
             height: 35,
             decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(8),
-                bottomRight: Radius.circular(8),
-              ),
               color: Colors.black54,
             ),
             child: const Align(
