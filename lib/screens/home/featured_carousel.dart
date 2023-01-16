@@ -48,7 +48,7 @@ class _FeaturedCarouselState extends State<FeaturedCarousel> {
             }),
       ),
       SizedBox(
-        height: 212,
+        height: 216,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
