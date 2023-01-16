@@ -33,13 +33,15 @@ class _FeaturedCarouselState extends State<FeaturedCarousel> {
             }),
       ),
       SizedBox(
-        height: 224,
+        height: 212,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: List<Widget>.generate(totalFeatures, (int index) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 4,
+              ),
               child: Container(
                 width: 8,
                 height: 8,
@@ -101,7 +103,7 @@ class ImageOverlay extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: 125,
+            height: 135,
           ),
           Container(
             width: MediaQuery.of(context).size.width - 16,
@@ -119,7 +121,7 @@ class ImageOverlay extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.of(context).size.width - 16,
-            height: 45,
+            height: 35,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(8),
@@ -127,22 +129,20 @@ class ImageOverlay extends StatelessWidget {
               ),
               color: Colors.black54,
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 8, left: 8, right: 8),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: const [
-                  Text(
-                    'Insulin urgently needed in Dnipro',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
+            child: const Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.only(
+                  bottom: 8,
+                ),
+                child: Text(
+                  'Insulin urgently needed in Dnipro',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
                   ),
-                  SizedBox(
-                    height: 16,
-                  )
-                ],
+                ),
               ),
             ),
           ),

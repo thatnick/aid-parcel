@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../models/beneficiary_model.dart';
-import '../../models/country_model.dart';
 import '../error/error_page.dart';
 import '../main/destination_view.dart';
-import 'beneficiary_card.dart';
+import 'beneficiary_scroll.dart';
 import 'featured_carousel.dart';
 
 class HomePage extends StatefulWidget {
@@ -41,22 +39,38 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            const FeaturedCarousel(),
+          children: const [
+            FeaturedCarousel(),
+            SizedBox(height: 16),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 100,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemCount: Country.sampleCountries.length,
-                    itemBuilder: (context, index) {
-                      return BeneficiaryBox(
-                          beneficiary: Beneficiary.sampleBeneficiaries[index]);
-                    }),
+              padding: EdgeInsets.only(left: 8, bottom: 4),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Afghanistan',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
             ),
+            BeneficiaryScroll(),
+            SizedBox(height: 16),
+            Padding(
+              padding: EdgeInsets.only(left: 8, bottom: 4),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Ukraine',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+            BeneficiaryScroll(),
           ],
         ),
       ),
