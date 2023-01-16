@@ -135,9 +135,10 @@ class ImageOverlay extends StatelessWidget {
               color: Colors.black54,
             ),
             child: const Align(
-              alignment: Alignment.bottomCenter,
+              alignment: Alignment.bottomLeft,
               child: Padding(
                 padding: EdgeInsets.only(
+                  left: 8,
                   bottom: 8,
                 ),
                 child: Text(
