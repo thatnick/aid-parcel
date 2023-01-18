@@ -1,16 +1,33 @@
-# aid_connect
+# Aid Parcel
 
-A new Flutter project.
+We’re Spirited Software and Aid Parcel is our submission for the Crisis Zone Hackathon.
 
-## Getting Started
+Our solution - Aid Parcel - is a platform consisting of three applications. A mobile application for donors, a mobile application for delivery drivers and operational hub workers, and a web application to administer the other two applications.
 
-This project is a starting point for a Flutter application.
+## Pitch video
 
-A few resources to get you started if this is your first Flutter project:
+https://youtu.be/wbXrXoyfE1I
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Interactive Design Prototypes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Aid Parcel (donor facing mobile app)
+
+https://www.figma.com/proto/jCbecQXEcsFxSBfj8TCfcx/Aid-Parcel?node-id=1%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2
+
+### Aid Parcel Deliver (hub worker and driver facing mobile app)
+
+https://www.figma.com/proto/jCbecQXEcsFxSBfj8TCfcx/Aid-Parcel?node-id=241%3A6132&scaling=min-zoom&page-id=123%3A2657&starting-point-node-id=241%3A6132
+
+### Aid Parcel Admin (beneficiary and hub worker facing web app)
+
+#### Hub worker view
+
+https://www.figma.com/proto/jCbecQXEcsFxSBfj8TCfcx/Aid-Parcel?node-id=213%3A2040&scaling=scale-down&page-id=213%3A2039&starting-point-node-id=213%3A2040
+
+#### Beneficiary view
+
+https://www.figma.com/proto/jCbecQXEcsFxSBfj8TCfcx/Aid-Parcel?node-id=209%3A1201&scaling=scale-down&page-id=123%3A2658&starting-point-node-id=209%3A1201
+
+### Figma file
+
+https://www.figma.com/file/jCbecQXEcsFxSBfj8TCfcx/Aid-Parcel?node-id=1%3A2&t=hcEjpIUN5SaKtGmd-1
