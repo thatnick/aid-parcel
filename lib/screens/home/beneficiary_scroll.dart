@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../models/beneficiary_model.dart';
+import 'beneficiary_card.dart';
+
 class BeneficiaryScroll extends StatefulWidget {
   const BeneficiaryScroll({super.key});
 
@@ -20,91 +23,13 @@ class _BeneficiaryScrollState extends State<BeneficiaryScroll> {
             pageSnapping: false,
             padEnds: false,
             controller: PageController(viewportFraction: 0.66),
-            itemCount: totalFeatures,
+            itemCount: Beneficiary.sampleBeneficiaries.length,
             itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Container(
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      width: 1,
-                      strokeAlign: StrokeAlign.inside,
-                      color: const Color(0xFF025949),
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Column(
-                    children: const [
-                      FeaturedImage(),
-                      TextBox(),
-                    ],
-                  ),
-                ),
+              return BeneficiaryCard(
+                beneficiary: Beneficiary.sampleBeneficiaries[index],
               );
             }),
       ),
     ]);
-  }
-}
-
-class FeaturedImage extends StatelessWidget {
-  const FeaturedImage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 125,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-            'assets/sample_images/ukr/cover.jpeg',
-          ),
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-}
-
-class TextBox extends StatelessWidget {
-  const TextBox({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.center,
-      child: SizedBox(
-        width: (MediaQuery.of(context).size.width * 0.66) - 16,
-        height: 50,
-        child: Padding(
-          padding: const EdgeInsets.all(4),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
-                'Mechnikov Hospital',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              Text(
-                'Dnipro',
-                style: TextStyle(
-                  fontSize: 14,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 }
