@@ -4,6 +4,8 @@ We’re Spirited Software and Aid Parcel is our submission for the Crisis Zone H
 
 Our solution - Aid Parcel - is a platform consisting of three applications. A mobile application for donors, a mobile application for delivery drivers and operational hub workers, and a web application to administer the other two applications.
 
+This repo is for the donor facing mobile app.
+
 ## Pitch video
 
 https://youtu.be/wbXrXoyfE1I
